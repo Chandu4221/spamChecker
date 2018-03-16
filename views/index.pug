@@ -5,9 +5,24 @@ block content
   p Welcome to Spam Checker
   form(action='/',method='POST')
     .form-group
-      textarea#message.form-control(name='message',rows='3')
+      input#subject.form-control.mb-2(name="subject",placeholder="Subject")
+      textarea#message.form-control(name='message',rows='3',placeholder="Your Message")
     button.btn.btn-primary(type='submit') Check
   if message
-  .error.alert.alert-secondary.mt-3
-    =message
+    if spam
+      .alert.alert-warning.mt-3
+        h4.alert-heading
+          =message
+      each rule in rules
+        div= rule
+    else
+      .alert.alert-success.mt-3
+        h4.alert-heading
+          =message
+  else
+    .alert.alert-danger.mt-3
+        h4.alert-heading
+          =errMsg
+  p.d-block.mt-3= subject
+  p.d.block.mt-2= messageBody
 
