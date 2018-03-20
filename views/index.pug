@@ -7,7 +7,8 @@ block content
     .form-group
       input#subject.form-control.mb-2(name="subject",placeholder="Subject")
       textarea#message.form-control(name='message',rows='3',placeholder="Your Message")
-    button.btn.btn-primary(type='submit') Check
+    button#spamWordsCheck.btn.btn-danger(type='button') Spam Words Check
+    button.btn.btn-primary(type='submit') Spamassassin Check
   if message
     if spam
       .alert.alert-warning.mt-3
@@ -24,5 +25,6 @@ block content
         h4.alert-heading
           =errMsg
   p.d-block.mt-3= subject
-  p.d.block.mt-2= messageBody
+  div.context
+    p#messageBody.d.block.mt-2= messageBody
 

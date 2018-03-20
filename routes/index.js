@@ -4,7 +4,6 @@ var bodyParser = require('body-parser');
 var Spamd = require("node-spamd");
 var spamd  = new Spamd('root', 'root', 'localhost', 783);
 
-
 /* GET home page. */
 router
 .get('/', function(req, res, next) {
