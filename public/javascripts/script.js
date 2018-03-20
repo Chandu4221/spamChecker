@@ -460,8 +460,10 @@ let spamWordsList = [
 ];
 
     $("#spamWordsCheck").on('click',()=>{
+        $("#subjectBody").text($("#subject").val());
         $("#messageBody").text($("#message").val());
-        $(".context").mark(spamWordsList,{
+
+        $(".subjectContext, .messageContext").mark(spamWordsList,{
             "accuracy": "exactly",
             "separateWordSearch": false
         });

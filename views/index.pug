@@ -24,7 +24,8 @@ block content
     .alert.alert-danger.mt-3
         h4.alert-heading
           =errMsg
-  p.d-block.mt-3= subject
-  div.context
+  div.subjectContext
+    p#subjectBody.d-block.mt-3= subject
+  div.messageContext
     p#messageBody.d.block.mt-2= messageBody
 
