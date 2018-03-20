@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 a {
@@ -13,4 +15,8 @@ a {
 mark{
   background-color: #bd2130;
   color:#fff;
+}
+pre{
+  font-size: 14px;
+  line-height: 1.5;
 }
